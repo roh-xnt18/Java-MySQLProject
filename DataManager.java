@@ -121,7 +121,7 @@ public class DataManager {
         try (Connection conn = connect()) {
             System.out.print("Enter the ID of the record to delete: ");
             int id = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine(); 
 
             String query = "DELETE FROM power_device_log WHERE id = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -148,10 +148,10 @@ public class DataManager {
         int choice;
         try {
             choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine(); 
         } catch (Exception e) {
             System.out.println("Invalid input. Please enter a number.");
-            scanner.nextLine(); // clear buffer
+            scanner.nextLine();
             continue;
         }
 
